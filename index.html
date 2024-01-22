@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physiotherapie Christian Braun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        font-family: 'Gabarito', sans-serif;
+        margin: 0;
+    }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+    .header-image {
+        height: 65vh;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        margin-top: 100px;
+
+    }
+
+    .logo {
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        text-align: center;
+        justify-content: center;
+        margin-left: 5%;
+
+    }
+    
+    .container {
+        position: absolute;
+        right: 0;
+        margin-right: 8%;
+        top: 45px;
+        justify-content: center;
+
+    }
+
+    .menu-link {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        padding: 20px;
+        font-size: 22px;
+        font-weight: 600;
+
+    }
+
+    .menu-link:hover {
+        color: rgb(186, 218, 160);
+        text-decoration-line: underline;
+    }
+
+    .headline {
+        position: absolute;
+        top: 340px;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 30px;
+
+    }
+
+    .highlight {
+        font-size: 48px;
+        text-decoration: underline;
+        text-shadow: 2px 2px 5px rgb(34, 34, 34);
+        color: rgb(186, 218, 160);
+    }
+
+    .btn {
+        position: absolute;
+        top: 500px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+        padding: 17px 36px;
+        font-size: 16px;
+
+    }
+
+    .btn:hover {
+        background-color: rgb(186, 218, 160);
+        padding: 18px 38px;
+        font-size: 17px;
+    }
+
+    .socials {
+        position: absolute;
+        position: fixed;
+        top: 20%;
+        right: 0%;
+        text-align: center;
+        background-color: rgb(235, 235, 235);
+        padding: 1%;
+        padding-left: 1%;
+        padding-right: 1%;
+        border-radius: 20px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        z-index: 2;
+    }
+
+    .socials:hover {
+        background-color: rgb(255, 255, 255);
+    }
+
+    .social-img {
+        width: 45px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+        padding-left: 2px;
+    }
+
+    .social-img:hover {
+        filter: brightness(0.5);
+        width: 50px;
+    }
+
+
+    .section2 {
+        margin-top: 30px;
+        height: 90px;
+        background: rgb(153, 212, 105);
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 90px;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgb(186, 218, 160), 0 6px 20px 0 rgb(186, 218, 160);
+    }
+
+    div.polaroid {
+        width: 29%;
+        float: left;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 2%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .polaroid img {
+        border-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        height: 100%;
+        cursor: zoom-in;
+        transition: all 0.6s;
+    }
+
+    .polaroid:hover img{
+        z-index: 1;
+        transform: scale(1.1);
+    }
+
+    .container2 {
+        text-align: center;
+        padding: 10px 20px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    
+    .ortbtn {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        transform: translateX(-50%) translateY(50%);
+        width: 150px;
+        border-radius: 15px;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding-top: 17px;
+        padding-bottom: 17px;
+        padding: 17px 36px;
+        margin-bottom: 40px;
+        margin-top: -20px;
+        left: 50%;
+        font-weight: 500;
+        font-size: 16px;
+    }
+
+    .ortbtn:hover {
+        background-color: rgb(186, 218, 160);
+        padding: 18px 38px;
+        font-size: 17px;
+    }
+
+
+    .section3 {
+        float: right;
+        left: 50%;
+        margin-top: 30px;
+        height: 90px;
+        background: rgb(153, 212, 105);
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 90px;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgb(186, 218, 160), 0 6px 20px 0 rgb(186, 218, 160);
+
+    }
+
+    
+    .picturegallery1 {
+        position: relative;
+        float: left;
+        width: 40%;
+        margin-top: 4%;
+        margin-left: 7%;
+
+
+    }
+
+    .picturegallery2 {
+        position: relative;
+        float: right;
+        width: 40%;
+        margin-top: 4%;
+        margin-right: 7%;
+
+    }
+
+    .galleryimg {
+        display: block;
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .gallerytext {
+        text-decoration: underline;
+        font-size: 30px;
+        margin-bottom: 15px;
+
+    }
+
+    .gallerytext2 {
+        font-size: 20px;
+        text-align: center;
+        margin-right: 5%;
+        margin-left: 5%
+
+    }
+
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        background:rgb(0, 0, 0, 0.6);
+        color: aliceblue;
+        font-size: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: 0.6s;
+    }
+
+    .overlay:hover {
+        opacity: 1;
+        transition: 0.6s;
+    }
+
+    .section4 {
+        float: left;
+        left: 50%;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        height: 90px;
+        background: rgb(153, 212, 105);
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 90px;
+        margin-left: 25%;
+        margin-right: 25%;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px 0 rgb(186, 218, 160), 0 6px 20px 0 rgb(186, 218, 160);
+
+    }
+
+
+
+      /*Formular wurde mit ChatGPT erstellt*/
+    .formular {
+            max-width: 70%;
+            min-width: 50%;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin: 8px 0;
+        }
+
+        .form-group-inline {
+            max-width: 100%;
+            min-width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        input[type=text], input[type=email], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            position: relative;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 0 auto;
+            display: block;
+        }
+
+        input[type=submit]:hover {
+            background-color: #346136;
+        }
+
+        .error-message {
+            color: red;
+        }
+
+        .form-title {
+            text-align: center;
+
+        }
+
+        #googleMap {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 70px;
+            margin-bottom: 5px;
+            height: 500px;
+            border-radius: 20px;
+        }
+
+
+
+    .footer {
+        position: relative;
+        height: 3vh;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%) translateY(50%);
+        box-sizing: border-box;
+        text-align: center;
+        vertical-align: middle;
+        float: inline-end;
+
+    }
+
+    .footer-link {
+        text-decoration: none;
+        vertical-align: middle;
+        text-align: center;
+        color: rgb(27, 27, 27);
+        padding: 15px;
+    }
+
+
+
+    .footer-link:hover {
+        text-decoration-line: underline;
+    }
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+    <h1  id="home" class="logo">PHYSIOTHERAPIE <br> <span style="font-size:20px">Christian Braun</span> </h1>
+
+<div class="container">
+<a onClick="window.location.reload();" class="menu-link" href="">Home</a>
+<a class="menu-link" href="#team/kunden">Team/Kunden</a>
+<a class="menu-link" href="#kontakt">Kontakt</a>
+</div>
+
+
+<img class="header-image"src="img/Physio-Bild.jpg">
+
+<h1 class="headline">Endlich wieder<br> <span class="highlight"> aktiv, unabhängig und schmerzfrei </span> <br> durchs Leben! </h1>
+
+<a href="#kontakt" ><span class="btn">Kontaktiere mich</span></a>
+
+
+<div class="socials">
+    <a href="http://instagram.com"><img class="social-img"src="img/Instagram.png"> </a><br>
+    <a href="http://facebook.com"><img class="social-img"src="img/Facebook.png"> </a><br>
+    <a href="http://whatsapp.com"><img class="social-img"src="img/whatsapp.png"></a>
+</div>
+
+
+<div class="section2">MEINE ARBEIT</div>
+
+<div class="polaroid">
+<img class="polaroid img" src="img/Bewertung - Diagnose.jpg" alt="Bewertung - Diagnose" style="width:100%">
+<div class= "container2"><p>Bewertung/Diagnose</p></div> </div>
+
+<div class="polaroid">
+<img class="polaroid img" src="img/Behandlung - Therapie.jpg" alt="Behandlung - Therapie" style="width:100%">
+<div class="container2"><p>Behandlung/Therapie</p></div></div>
+
+<div class="polaroid">
+<img class="polaroid img" src="img/Beratung - Prävention.jpg" alt="Beratung - Prävention" style="width:100%">
+<div class="container2"> <p>Beratung/Prävention</p>
+</div></div>
+
+
+<a href="#googleMap" ><span class="ortbtn">Mein Standort</span></a>
+
+
+    <div id="team/kunden" class="section3" style="width: 50%;">TEAM/KUNDEN</div>
+
+<div class="picturegallery1">
+
+    <img src="img/Über mich Bild2.jpg" style="width:100%" class="galleryimg">
+    
+    <div class="overlay">
+        <div class="gallerytext">Mein Team</div>
+        <div class="gallerytext2">"Unser leidenschaftliches Team von erfahrenen Physiotherapeuten ist hier, 
+            um Ihnen zu helfen. Jedes Teammitglied bringt einzigartige Fähigkeiten ein, um Schmerzlinderung, 
+            Beweglichkeitsverbesserung und Steigerung Ihrer Lebensqualität zu unterstützen."</div>
+    </div> 
+    </div>
+
+
+
+<div class="picturegallery2">
+<img src="img/Physiotherapie bild.jpg" style="width:100%" class="galleryimg">
+
+<div class="overlay">
+    <div class="gallerytext">Meine Kunden</div>
+    <div class="gallerytext2">"Unsere geschätzten Kunden sind das Herz unserer Praxis. 
+        Wir arbeiten eng mit Ihnen zusammen, um Ihre individuellen Gesundheitsziele zu erreichen. 
+        Lassen Sie sich von ihren Erfolgsgeschichten inspirieren und erfahren Sie, wie auch Sie 
+        ein schmerzfreies Leben führen können."</div>
+</div> 
+</div>
+
+<div id="kontakt" class="section4" style="width: 50%;">KONTAKT</div>
+
+<div class="formular">
+
+    <form action="/deine-server-seite.php" method="post" id="kontakt-formular">
+        <div class="form-title"></div>
+        <div class="form-group-inline">
+            <div class="form-group" style="width: 45%;">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" required>
+            </div>
+
+            <div class="form-group" style="width: 45%;">
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nachricht">Nachricht:</label>
+            <textarea id="nachricht" name="nachricht" rows="4" required></textarea>
+        </div>
+
+        <input type="submit" value="Absenden" id="absenden-button">
+    </form>
+</div>
+
+
+
+<div id="googleMap"></div>
+
+<script>
+function myMap() {
+var mapProp= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=myMap"></script>
+
+
+
+<div class="footer">
+    <a onClick="window.location.reload();" class="footer-link" href="">Home</a>
+    <a class="footer-link" href="#team/kunden">Team/Kunden</a>
+    <a class="footer-link" href="#kontakt">Kontakt</a>
+</div>
+
+</body>
+</html>
+
